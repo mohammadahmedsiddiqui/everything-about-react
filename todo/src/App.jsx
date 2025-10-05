@@ -1,55 +1,55 @@
-import { useState } from 'react'
+import React from "react";
+import { useState } from "react";
 
-import './App.css'
-import Todoinput from './component/todoinput'
-
-function App() {
- 
-
-
-  const [todo, settodo] = useState("")
-const [todos, settodos] = useState([{
-todo:"book reading",
-id:Date.now(),
-completed:false
-}])
+const App = () => {
+  const [todo, settodo] = useState("");
+const [maintask, setmaintask] = useState([])
+  const submithandler = () => {
+    setmaintask([...maintask ,{todo}])
+    settodo("");
+    console.log(maintask)
+  };
 
 
-const handleaddtodo = ()=>{
-  const todosarr =[...todos,{
-    todo,
-    id:Date.now(),
-    completed:false
-  }]
-  settodos([...todosarr])
-  settodo("")
-  console.log(todosarr)
-}
 
+  let rendertask= "no task available"
+  rendertask = maintask.map((t,i)=>{
+    return(
+<div>
+  <p>{t.todo}</p>
+</div>
+)
 
+  })
 
   return (
-  <>
-  <h1 className='text-5xl text-blue-900 text-center '> todo app</h1>
-  <Todoinput 
-  value={todo}
- onchange={(e)=>settodo(e.target.value)}
-onclick={handleaddtodo}
+    <>
+      <h1 className="bg-black mb-3 px-6 py-4 font-bold text-5xl text-white">
+        todolist
+      </h1>
+      <input
+        className=" border-black border-2 px-6 py-4 "
+        type="text"
+        value={todo}
+        onChange={(e) => {
+          settodo(e.target.value);
+        }}
+      />
+      <button
+        onClick={submithandler}
+        className="bg-black text-white-4 px-6 ml-5 rounded-2xl py-4 font-black text-white"
+      >
+        add task
+      </button>
 
-  />
 
-  {
-    todos.map((todo,idx)=>{
-    return(
-      <div className=' py-10 flex gap-40 justify-center' key={todo.id}>
-           <h3 className='text-gray-950 font-bold flex-left'>{todo.todo}</h3>
-<button className='bg px-4 py-2.5 font-bold bg-blue-950 text-white ' >delete todo</button>
+
+
+      <div className="bg-slate-300  p-10 m-4">
+      <h3>{rendertask}</h3>
       </div>
-    )
-    })
-  }
-  </>
-  )
-}
+    </>
+  );
+};
 
-export default App
+export default App;
