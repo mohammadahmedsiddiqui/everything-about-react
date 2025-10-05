@@ -1,0 +1,10 @@
+
+@import "tailwindcss";
+body{
+    width: 60%;
+    margin: auto;
+    justify-items: center;
+    text-align: center
+}
+
+
