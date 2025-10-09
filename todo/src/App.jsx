@@ -4,19 +4,26 @@ import { useState } from "react";
 const App = () => {
   const [todo, settodo] = useState("");
 const [maintask, setmaintask] = useState([])
+
+
   const submithandler = () => {
     setmaintask([...maintask ,{todo}])
     settodo("");
     console.log(maintask)
   };
 
-
+const deletehandler =(i)=>{
+let removedtask = [...maintask]
+removedtask.splice(i,1)
+setmaintask(removedtask)
+}
 
   let rendertask= "no task available"
   rendertask = maintask.map((t,i)=>{
     return(
-<div>
-  <p>{t.todo}</p>
+<div key={i} className="mb-10 flex justify-center gap-10">
+  <p className="flex items-center">{t.todo}</p>
+  <button className="bg-red-600 px-5 py-3 font-bold text-white" onClick={()=>{deletehandler(i)}}>delete</button>
 </div>
 )
 
@@ -27,7 +34,9 @@ const [maintask, setmaintask] = useState([])
       <h1 className="bg-black mb-3 px-6 py-4 font-bold text-5xl text-white">
         todolist
       </h1>
-      <input
+
+      <div className="flex justify-center">
+<input
         className=" border-black border-2 px-6 py-4 "
         type="text"
         value={todo}
@@ -41,6 +50,8 @@ const [maintask, setmaintask] = useState([])
       >
         add task
       </button>
+      </div>
+      
 
 
 
