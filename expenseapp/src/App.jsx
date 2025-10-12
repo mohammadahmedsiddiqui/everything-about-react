@@ -7,6 +7,7 @@ function App() {
 const [input, setinput] = useState('')
 const [type, settype] = useState('income')
 const [transaction , settransaction] = useState([])
+const [editindex , seteditindex] = useState(null)
 
 
 
@@ -19,20 +20,46 @@ function handletype(e) {
 }
 
 function handleclick() {
+
+if (editindex !== null) {
+  const updated = transaction.map((item , index)=>{
+    return(
+index===editindex ? {input,type} : item
+    )
+   
+  })
+   settransaction(updated)
+      seteditindex(null)
+} else {
   settransaction([...transaction,{input,type}])
+  setinput('')
+  settype('income')
+}
+
+
+
+
+
+  
 }
 
 let income = transaction.reduce((p,c)=>{
-return( c.type == 'income' ? p + Number(c.input) : p)
+return( c?.type == 'income' ? p + Number(c.input) : p)
 },0)
 
 let expense = transaction.reduce((p,c)=>{
-return( c.type == 'expense' ? p + Number(c.input) : p)
+return( c?.type == 'expense' ? p + Number(c.input) : p)
 },0)
 
 
 let balance = income-expense
 
+
+  function handleedit(index) {
+    setinput(transaction[index]?.input)
+    settype(transaction[index]?.type)
+    seteditindex(index)
+  }
   return (
     <>
     <div style={{textAlign:"center"}}>
@@ -59,7 +86,7 @@ return(
   <div key={i}>
    
       <li>{k.type}: {k.input}</li>
-     
+     <button onClick={()=>handleedit(i)}>edit</button>
   
   </div>
 )

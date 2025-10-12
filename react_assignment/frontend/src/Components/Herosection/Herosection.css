@@ -1,0 +1,18 @@
+.hero-section{
+   width: 100%;
+    background-color: black;
+    height: 100vh;
+    
+display: flex;
+}
+
+.s1{
+    background: red;
+width: 50%;
+}
+
+.s2{
+    background: greenyellow;
+    width: 50%;
+}
+
