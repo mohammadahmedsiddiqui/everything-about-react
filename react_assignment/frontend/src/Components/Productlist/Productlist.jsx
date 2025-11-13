@@ -25,7 +25,7 @@ async function fetchProducts() {
 
   {
     products.map((item, index)=>(
-      <Productcard key={index} title={item.productname} price={item.price} description={item.description} image={item.image} />
+      <Productcard key={index} productname={item.productname} price={item.price} description={item.description} image={item.image} />
     ))
   }
   

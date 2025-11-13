@@ -10,10 +10,7 @@ require("dotenv").config();
 // global middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors({
-   origin: "http://localhost:5174",
-  credentials: true
-}))
+app.use(cors())
 
 
 // env variables
@@ -30,7 +27,7 @@ app.post( "/addproduct" ,  async (req, res) => {
  const   { image, productname, price, description } = req.body;
     const newProduct = new productschema ( { image, productname, price, description } );
     await newProduct.save();
-     res.status(201).json(newProduct , "product added successfully");
+     res.status(201).json({success:true , message:"product addedd successfully"});
   } catch (error) {
    res.status(400).json({success:false,message:"error meaaage"})
   }

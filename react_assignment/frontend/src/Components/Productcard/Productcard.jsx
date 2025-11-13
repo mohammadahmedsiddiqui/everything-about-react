@@ -1,15 +1,17 @@
 import React from 'react'
 
+
+
 const Productcard = ({   productname,
     price, 
     description,
     image}) => {
   return (
  <>
-    <div className='border rounded w-[300px] shadow pb-2 m-2 flex flex-col items-center gap-4'>
+    <div className='border p-5 rounded w-[300px] shadow pb-2 m-2 flex flex-col items-center gap-4'>
         <img className='w-full h-[300px] object-contain' src={image} alt="Product" />
 
-        <h2 className='text-2xl font-bold'>{productname}</h2>
+        <h2 className='text-2xl font-black'>{productname}</h2>
 
         <p className='text-gray-600 '>
             {description.length > 50 ? description.slice(0, 50) + '...' : description}
