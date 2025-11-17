@@ -36,9 +36,9 @@
 		{
 			"id": "pointer:pointer",
 			"typeName": "pointer",
-			"x": 581,
-			"y": 292,
-			"lastActivityTimestamp": 1763231672100,
+			"x": 178.5497073052324,
+			"y": 306.6294358169579,
+			"lastActivityTimestamp": 1763233349721,
 			"meta": {}
 		},
 		{
@@ -82,7 +82,7 @@
 		},
 		{
 			"x": 187,
-			"y": 316,
+			"y": 716,
 			"z": 0.5,
 			"meta": {},
 			"id": "camera:page:page",
@@ -218,10 +218,8 @@
 		{
 			"editingShapeId": null,
 			"croppingShapeId": null,
-			"selectedShapeIds": [
-				"shape:Esofzm0dCJjmobsArBc6q"
-			],
-			"hoveredShapeId": "shape:WuebJw1pFyvBgTCXyp1oN",
+			"selectedShapeIds": [],
+			"hoveredShapeId": null,
 			"erasingShapeIds": [],
 			"hintingShapeIds": [],
 			"focusedGroupId": null,
@@ -229,6 +227,267 @@
 			"id": "instance_page_state:page:page",
 			"pageId": "page:page",
 			"typeName": "instance_page_state"
+		},
+		{
+			"editingShapeId": "shape:9Wwlg3Pjot5Xi2ysF5ZIn",
+			"croppingShapeId": null,
+			"selectedShapeIds": [
+				"shape:9Wwlg3Pjot5Xi2ysF5ZIn"
+			],
+			"hoveredShapeId": "shape:9Wwlg3Pjot5Xi2ysF5ZIn",
+			"erasingShapeIds": [],
+			"hintingShapeIds": [],
+			"focusedGroupId": null,
+			"meta": {},
+			"id": "instance_page_state:page:k3NOaeWyeJmCJbFCOse-3",
+			"pageId": "page:k3NOaeWyeJmCJbFCOse-3",
+			"typeName": "instance_page_state"
+		},
+		{
+			"x": 207.19395944234634,
+			"y": 271.0452260928307,
+			"z": 0.531441,
+			"meta": {},
+			"id": "camera:page:k3NOaeWyeJmCJbFCOse-3",
+			"typeName": "camera"
+		},
+		{
+			"x": 57,
+			"y": -148.09375,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:9Wwlg3Pjot5Xi2ysF5ZIn",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "m",
+				"w": 1031.40625,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "step 1 run command "
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "npm install @reduxjs/toolkit"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "npm install react-redux"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							}
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "step 2"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "make a store at whereever you want into your project folder"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "const {configureStore} = require('@reduxjs/toolkit');"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "and export it"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							}
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "step 3"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "make a reducers"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "make a new folders name as features like (login , logout create account add todo)"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "make a folder todo"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "make a file todoslice.js"
+								},
+								{
+									"type": "hardBreak"
+								},
+								{
+									"type": "text",
+									"text": " "
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							}
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "step 4"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "create a store"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "define a store initial value"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							}
+						}
+					]
+				}
+			},
+			"parentId": "page:k3NOaeWyeJmCJbFCOse-3",
+			"index": "a1zeEeiG",
+			"typeName": "shape"
 		},
 		{
 			"x": 263,
@@ -291,7 +550,7 @@
 		{
 			"meta": {},
 			"id": "page:page",
-			"name": "Page 1",
+			"name": "introduction",
 			"index": "a1",
 			"typeName": "page"
 		},
@@ -307,13 +566,13 @@
 			"opacityForNextShape": 1,
 			"stylesForNextShape": {
 				"tldraw:fill": "none",
-				"tldraw:size": "l",
+				"tldraw:size": "m",
 				"tldraw:geo": "rectangle"
 			},
 			"brush": null,
 			"scribbles": [],
 			"cursor": {
-				"type": "grabbing",
+				"type": "default",
 				"rotation": 0
 			},
 			"isFocusMode": false,
@@ -323,7 +582,7 @@
 			"screenBounds": {
 				"x": 0,
 				"y": 0,
-				"w": 598,
+				"w": 932,
 				"h": 566
 			},
 			"insets": [
@@ -348,7 +607,7 @@
 			"meta": {},
 			"duplicateProps": null,
 			"id": "instance:instance",
-			"currentPageId": "page:page",
+			"currentPageId": "page:k3NOaeWyeJmCJbFCOse-3",
 			"typeName": "instance"
 		},
 		{
@@ -396,6 +655,13 @@
 			"parentId": "page:page",
 			"index": "a5h36KmV",
 			"typeName": "shape"
+		},
+		{
+			"meta": {},
+			"id": "page:k3NOaeWyeJmCJbFCOse-3",
+			"name": "installation and steps",
+			"index": "a2sfFNCV",
+			"typeName": "page"
 		},
 		{
 			"x": 245,
